@@ -2,7 +2,7 @@ var currentCityEl= $('#current-city');
 var searchHistroryEl= $("#search-history");
 var currentDisplayEl = $('#currentDisplay');
 var ForcastDisplayEl = $('#ForcastDisplay');
-var APIKey = 'bdf3de5b1ec8cbb4eba643e01a2c54c2';
+var APIKey = '';
 var city = '';
 var displayIcon = $('#icon1');
 var searchHistory = []
@@ -74,7 +74,7 @@ fetch(queryURLGeocode)
                         //creates
                         var forcastdiv = $('<div>')
                         var count = (6+((i*8)+1))
-                        console.log(count);
+                        console.log(data);
                         forcastdiv.addClass("col-2 border border-2 m-2 bg-secondary")
                         var iconEl = $('<img>').attr("src", "https://openweathermap.org/img/w/"+ data.list[count].weather[0].icon + ".png")
                         var forecastUL = $('<ul>').addClass("list-group list-group-flush col-3");
