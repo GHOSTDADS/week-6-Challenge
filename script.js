@@ -73,16 +73,18 @@ fetch(queryURLGeocode)
                 for (var i = 0; i < 5; i++){
                         //creates
                         var forcastdiv = $('<div>')
+                        var count = (6+((i*8)+1))
+                        console.log(count);
                         forcastdiv.addClass("col-2 border border-2 m-2 bg-secondary")
-                        var iconEl = $('<img>').attr("src", "https://openweathermap.org/img/w/"+ data.list[(8+((i*8)+1))].weather[0].icon + ".png")
+                        var iconEl = $('<img>').attr("src", "https://openweathermap.org/img/w/"+ data.list[count].weather[0].icon + ".png")
                         var forecastUL = $('<ul>').addClass("list-group list-group-flush col-3");
-                        var listElTemp = $('<li>').text("Temp: " + data.list[(8+((i*8)+1))].main.temp + "\u00B0C");
+                        var listElTemp = $('<li>').text("Temp: " + data.list[count].main.temp + "\u00B0C");
                         listElTemp.addClass("list-group-item bg-secondary");
-                        var listElWind = $('<li>').text("Wind: " + data.list[(8+((i*8)+1))].wind.speed + " KMPH");
+                        var listElWind = $('<li>').text("Wind: " + data.list[count].wind.speed + " KMPH");
                         listElWind.addClass("list-group-item bg-secondary");
-                        var listElHumid = $('<li>').text("Humidity: " + data.list[(8+((i*8)+1))].main.humidity + "\u0025");
+                        var listElHumid = $('<li>').text("Humidity: " + data.list[count].main.humidity + "\u0025");
                         listElHumid.addClass("list-group-item bg-secondary");
-                        var date = dayjs.unix(data.list[(8+((i*8)+1))].dt).format('D/MM/YYYY');
+                        var date = dayjs.unix(data.list[count].dt).format('D/MM/YYYY');
                         var dateEl = $('<li>').text(date);
                         dateEl.addClass("list-group-item bg-secondary");
                         forecastUL.append(dateEl, iconEl, listElTemp, listElWind, listElHumid);
