@@ -24,7 +24,7 @@ Type in the City you would like to see the weather for, then press enter or clic
 
 After you will be shown the current weather on the top right, and 5 day forcast bellow. 
 
-<img src="./Assets/results.png" alt="picture of the webpage after searching" />
+<img src="./Assets/results.PNG" alt="picture of the webpage after searching" />
 
 ## Credits
 APIs: OpenweatherMaps.
